@@ -1,0 +1,19 @@
+[2026-04-09T15:47:30Z] === ENRICH ITERATION 1 START | repo=cloudpipe/cloudpickle sha=7576fff2 ===
+[2026-04-09T15:47:30Z] [iter=1] PHASE START: enrich repo=cloudpipe/cloudpickle sha=7576fff2 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/7576fff2-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/7576fff24b9769432f76cc6d2c01282583ee87a9.nq.gz
+[2026-04-09T15:47:30Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=76 MB
+[2026-04-09T15:47:32Z] [iter=1] AST store loaded triples=164951 load_secs=1 mem_mb=317 MB
+[2026-04-09T15:47:32Z] [iter=1] Step 2: Finding LSP targets mem_mb=317 MB
+[2026-04-09T15:47:32Z] [iter=1] LSP targets found call_sites=1485 imports=124 extends=33 implements=0 secs=0
+[2026-04-09T15:47:32Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=317 MB
+[2026-04-09T15:47:33Z] [iter=1] Position index built positions=11624 nodes_with_types=14700 secs=1 mem_mb=317 MB
+[2026-04-09T15:47:33Z] [iter=1] Step 3: Starting LSP resolution mem_mb=317 MB already_completed_types=[] already_completed_files=0
+[2026-04-09T15:47:33Z] [iter=1] Resolving target type target_type=call_site count=1485
+[2026-04-09T15:48:27Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.0 files_done=1 resolved=239 errors=678 current=tests/cloudpickle_file_test.py
+[2026-04-09T15:48:46Z] [iter=1] Target type resolved target_type=call_site resolved=484 errors=915 secs=73 mem_mb=317 MB
+[2026-04-09T15:48:46Z] [iter=1] Resolving target type target_type=import_statement count=124
+[2026-04-09T15:48:50Z] [iter=1] Target type resolved target_type=import_statement resolved=112 errors=0 secs=4 mem_mb=317 MB
+[2026-04-09T15:48:50Z] [iter=1] Resolving target type target_type=extends_clause count=33
+[2026-04-09T15:48:51Z] [iter=1] Target type resolved target_type=extends_clause resolved=33 errors=0 secs=1 mem_mb=317 MB
+[2026-04-09T15:48:53Z] [iter=1] Step 5: Writing final enrichment file triples=14194
+[2026-04-09T15:48:54Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/7576fff24b9769432f76cc6d2c01282583ee87a9.nq.gz size_kb=249
+[2026-04-09T15:48:54Z] [iter=1] PHASE END: enrich elapsed_s=83 elapsed_min=1.4 total_triples=14194
